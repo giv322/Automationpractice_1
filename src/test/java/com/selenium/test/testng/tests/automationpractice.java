@@ -12,7 +12,7 @@ import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class automationpractice {
     @Test
-    public void GoToCategory() {
+    public void GoToCategoryAll() {
         open("http://automationpractice.com/index.php");
         $("#block_top_menu > ul > li:nth-child(1) > a").click();
         $(By.className("cat-name")).shouldBe(visible).shouldHave(
