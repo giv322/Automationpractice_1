@@ -11,9 +11,11 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.clearBrowserCache;
 
 public class automationpractice {
+    final String SITE_URL = "http://automationpractice.com/index.php";
+
     @Test
     public void GoToCategoryAll() {
-        open("http://automationpractice.com/index.php");
+        open(SITE_URL);
         $("#block_top_menu > ul > li:nth-child(1) > a").click();
         $(By.className("cat-name")).shouldBe(visible).shouldHave(
                 text("Women"));
@@ -29,7 +31,7 @@ public class automationpractice {
 
     @Test
     public void GoToCategoryWomen() {
-        open("http://automationpractice.com/index.php");
+        open(SITE_URL);
         $("#block_top_menu > ul > li:nth-child(1) > a").click();
         $(By.className("cat-name")).shouldBe(visible).shouldHave(
                 text("Women"));
@@ -37,7 +39,7 @@ public class automationpractice {
 
     @Test
     public void GoToCategoryDresses() {
-        open("http://automationpractice.com/index.php");
+        open(SITE_URL);
         $("#block_top_menu > ul > li:nth-child(2) > a").click();
         $(By.className("cat-name")).shouldBe(visible).shouldHave(
                 text("Dresses"));
@@ -45,7 +47,7 @@ public class automationpractice {
 
     @Test
     public void GoToCategoryTshirts() {
-        open("http://automationpractice.com/index.php");
+        open(SITE_URL);
         $("#block_top_menu > ul > li:nth-child(3) > a").click();
         $(By.className("cat-name")).shouldBe(visible).shouldHave(
                 text("T-shirts"));
